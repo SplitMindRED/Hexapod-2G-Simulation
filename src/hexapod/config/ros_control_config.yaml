@@ -1,0 +1,94 @@
+hexapod_model:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 60
+
+  servo_9_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_leg_1_to_servo_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_6_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fr_leg_1_to_servo_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_12_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ml_leg_1_to_servo_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_3_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: mr_leg_1_to_servo_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_15_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: bl_leg_1_to_servo_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_0_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: br_leg_1_to_servo_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_10_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_servo_2_to_leg_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_11_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_leg_3_to_servo_3
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_13_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ml_servo_2_to_leg_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_14_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: ml_leg_3_to_servo_3
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_16_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: bl_servo_2_to_leg_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_17_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: bl_leg_3_to_servo_3
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_1_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: br_servo_2_to_leg_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_2_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: br_leg_3_to_servo_3
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_4_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: mr_servo_2_to_leg_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_5_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: mr_leg_3_to_servo_3
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_7_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fr_servo_2_to_leg_1
+    pid: {p: 50.0, i: 0.0, d: 1.0}
+
+  servo_8_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fr_leg_3_to_servo_3
+    pid: {p: 50.0, i: 0.0, d: 1.0}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+<!--this file is only for robot spawn -->
+
+	<!-- name of robot in urdf file  -->
+	<arg name="model" default="robot"/>	
+	<arg name = "x" default = "0"/>
+	<arg name = "y" default = "0"/>
+	<arg name = "z" default = "1"/>  
+
+	<!--  -->
+	<param name = "robot_description" command = "$(find xacro)/xacro --inorder '$(find my_robot_description)/urdf/$(arg model).urdf.xacro' " />
+
+	<rosparam file = "$(find my_robot_description)/config/ros_control_config.yaml" command = "load"/>
+	<node name = "controller_spawner" pkg = "controller_manager" type = "spawner" ns = "/hexapod_model" args="joint_state_controller
+		servo_0_joint_position_controller  servo_1_joint_position_controller  servo_2_joint_position_controller  servo_3_joint_position_controller
+		servo_4_joint_position_controller  servo_5_joint_position_controller  servo_6_joint_position_controller  servo_7_joint_position_controller
+		servo_8_joint_position_controller  servo_9_joint_position_controller  servo_10_joint_position_controller servo_11_joint_position_controller
+		servo_12_joint_position_controller servo_13_joint_position_controller servo_14_joint_position_controller servo_15_joint_position_controller
+		servo_16_joint_position_controller servo_17_joint_position_controller" />	 
+
+	<node name = "my_robot_spawn" pkg = "gazebo_ros" type = "spawn_model" output = "screen"	
+	args = "-urdf -param robot_description -model $(arg model) -x $(arg x) -y $(arg y) -z $(arg z)"/>
+
+	<!-- publish form topic /joint_state to tf tree -->
+	<node name = "robot_state_publisher" pkg = "robot_state_publisher" type = "robot_state_publisher" />
+
+	<!-- takes values from urdf? and publish to /joint states -->
+	<!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" /> -->
+
+	<!-- configuration file for rviz -->
+	<!-- <arg name="rvizconfig" default="$(find my_robot_description)/rviz/hexapod_sim.rviz" /> -->
+	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> -->
+
+
+</launch>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<robot name="my_robot_sim" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <gazebo reference="link_body">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_fl">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_ml">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_bl">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_fr">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_mr">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_br">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_fl2">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_ml2">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_bl2">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_fr2">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_mr2">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_br2">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_fl3">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_ml3">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_bl3">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_fr3">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_mr3">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="link_servo_br3">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  
+</robot>

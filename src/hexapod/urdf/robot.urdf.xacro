@@ -1,0 +1,1526 @@
+<?xml version="1.0"?>
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+	<xacro:include filename="$(find my_robot_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find my_robot_description)/urdf/robot.gazebo.xacro"/>
+
+  <gazebo>
+        <self_collide>1</self_collide>
+    </gazebo>
+
+<!-- #######################Robot description###################### -->
+
+<!-- #########################LINKS#########################3##### -->
+  <link name="link_root">
+    <pose> 0 0 0 0 0 0</pose>
+
+  <!--     <inertial>
+      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
+      <inertia ixx="0.05" ixy="0" ixz="0"   iyz="0"
+               iyy="0.05"
+               izz="0.05"/>
+    </inertial>
+ -->
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+      </geometry>   
+      <material name="white"/>  
+    </visual> -->
+  </link>
+
+  <link name="link_body">
+    <pose> 0 0 0 0 0 0</pose>
+    <static>true</static>
+      <inertial>
+      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
+      <inertia ixx="0.05" ixy="0" ixz="0"   iyz="0"
+               iyy="0.05"
+               izz="0.05"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+      </geometry>   
+      <material name="white"/>  
+    </visual>
+  </link>
+
+  <!-- front left servo -->
+  <link name="link_servo_fl">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- front right servo -->
+  <link name="link_servo_fr">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- back right servo -->
+  <link name="link_servo_br">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- back left servo -->
+  <link name="link_servo_bl">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- mid left servo -->
+  <link name="link_servo_ml">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- mid right servo -->
+  <link name="link_servo_mr">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- front left leg 1st part -->
+  <link name="link_leg_1_fl">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- front right leg 1st part -->
+  <link name="link_leg_1_fr">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- mid left leg 1st part -->
+  <link name="link_leg_1_ml">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- mid right leg 1st part -->
+  <link name="link_leg_1_mr">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- back left leg 1st part -->
+  <link name="link_leg_1_bl">
+    <pose> 0 0 0 0 0 0</pose>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- back right leg 1st part -->
+  <link name="link_leg_1_br">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- front left servo 2 -->
+  <link name="link_servo_fl2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- front left leg p2 -->
+  <link name="link_leg_2_fl">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+
+  <!-- front left servo 3 -->
+  <link name="link_servo_fl3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- front left leg p3 -->
+  <link name="link_leg_3_fl">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- mid left servo 2 -->
+  <link name="link_servo_ml2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- mid left leg p2 -->
+  <link name="link_ml_leg_p2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+
+  <!-- mid left servo 3 -->
+  <link name="link_servo_ml3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- mid left leg p3 -->
+  <link name="link_ml_leg_p3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- back left servo 2 -->
+  <link name="link_servo_bl2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- back left leg p2 -->
+  <link name="link_bl_leg_p2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+
+  <!-- back left servo 3 -->
+  <link name="link_servo_bl3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- back left leg p3 -->
+  <link name="link_bl_leg_p3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- back right servo 2 -->
+  <link name="link_servo_br2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- back right leg p2 -->
+  <link name="link_br_leg_p2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+
+  <!-- back right servo 3 -->
+  <link name="link_servo_br3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- back right leg p3 -->
+  <link name="link_br_leg_p3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- mid right servo 2 -->
+  <link name="link_servo_mr2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- mid right leg p2 -->
+  <link name="link_mr_leg_p2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+
+  <!-- mid right servo 3 -->
+  <link name="link_servo_mr3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- mid right leg p3 -->
+  <link name="link_mr_leg_p3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- front right servo 2 -->
+  <link name="link_servo_fr2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- front right leg p2 -->
+  <link name="link_fr_leg_p2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+
+  <!-- front right servo 3 -->
+  <link name="link_servo_fr3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- front right leg p3 -->
+  <link name="link_fr_leg_p3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <inertia ixx="0.01" ixy="0" ixz="0"   iyz="0"
+               iyy="0.01"
+               izz="0.01"/>
+    </inertial>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
+      <geometry>
+        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+<!-- ############################JOINTS##################### -->
+  <!-- root to body -->
+  <joint name="root_to_body" type="fixed">
+    <parent link="link_root"/>
+    <child link="link_body"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <!-- front left servo to body -->
+  <joint name="servo_fl_to_body" type="fixed">
+    <parent link="link_body"/>
+    <child link="link_servo_fl"/>
+    <origin rpy="0 0 3.925" xyz="0.5214734 -0.8715734 0.109"/>
+  </joint>
+
+  <!-- front right servo to body -->
+  <joint name="servo_fr_to_body" type="fixed">
+    <parent link="link_body"/>
+    <child link="link_servo_fr"/>
+    <origin rpy="0 0 2.355" xyz="-0.5214734 -0.8715734 0.109"/>
+  </joint>
+
+  <!-- back right servo to body -->
+  <joint name="servo_br_to_body" type="fixed">
+    <parent link="link_body"/>
+    <child link="link_servo_br"/>
+    <origin rpy="0 0 0.785" xyz="-0.5214734 0.8715734 0.109"/>
+  </joint>
+
+  <!-- back left servo to body -->
+  <joint name="servo_bl_to_body" type="fixed">
+    <parent link="link_body"/>
+    <child link="link_servo_bl"/>
+    <origin rpy="0 0 -0.785" xyz="0.5214734 0.8715734 0.109"/>
+  </joint>
+
+  <!-- mid left servo to body -->
+  <joint name="servo_ml_to_body" type="fixed">
+    <parent link="link_body"/>
+    <child link="link_servo_ml"/>
+    <origin rpy="0 0 -1.57" xyz="0.5925 0.0 0.109"/>
+  </joint>
+
+  <!-- mid right servo to body -->
+  <joint name="servo_mr_to_body" type="fixed">
+    <parent link="link_body"/>
+    <child link="link_servo_mr"/>
+    <origin rpy="0 0 1.57" xyz="-0.5925 0.0 0.109"/>
+  </joint>
+
+  <!-- joint front left leg 1st to front left servo -->
+  <joint name="fl_leg_1_to_servo_1" type="revolute">
+    <parent link="link_servo_fl"/>
+    <child link="link_leg_1_fl"/>
+    <axis xyz="0 0 -1" />
+    <origin rpy="0 0 3.1415" xyz="0.0 0.0525 0.17"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint front right leg 1st to front right servo -->
+  <joint name="fr_leg_1_to_servo_1" type="revolute">
+    <parent link="link_servo_fr"/>
+    <child link="link_leg_1_fr"/>
+    <axis xyz="0 0 -1" />
+    <origin rpy="0 0 3.1415" xyz="0.0 0.0525 0.17"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint mid left leg 1st to mid left servo -->
+  <joint name="ml_leg_1_to_servo_1" type="revolute">
+    <parent link="link_servo_ml"/>
+    <child link="link_leg_1_ml"/>
+    <axis xyz="0 0 -1" />
+    <origin rpy="0 0 3.1415" xyz="0.0 0.0525 0.17"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint mid right leg 1st to mid left servo -->
+  <joint name="mr_leg_1_to_servo_1" type="revolute">
+    <parent link="link_servo_mr"/>
+    <child link="link_leg_1_mr"/>
+    <axis xyz="0 0 -1" />
+    <origin rpy="0 0 3.1415" xyz="0.0 0.0525 0.17"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint back left leg 1st to mid left servo -->
+  <joint name="bl_leg_1_to_servo_1" type="revolute">
+    <parent link="link_servo_bl"/>
+    <child link="link_leg_1_bl"/>
+    <axis xyz="0 0 -1" />
+    <origin rpy="0 0 3.1415" xyz="0.0 0.0525 0.17"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint back right leg 1st to mid left servo -->
+  <joint name="br_leg_1_to_servo_1" type="revolute">
+    <parent link="link_servo_br"/>
+    <child link="link_leg_1_br"/>
+    <axis xyz="0 0 -1" />
+    <origin rpy="0 0 3.1415" xyz="0.0 0.0525 0.17"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint front left servo 2 to front left leg p1 -->
+  <joint name="fl_servo_2_to_leg_1" type="revolute">
+    <parent link="link_leg_1_fl"/>
+    <child link="link_servo_fl2"/>
+    <axis xyz="0 0 1" />
+    <origin rpy="0 1.57079 0" xyz="-0.069 -0.373 -0.209"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint front left leg p2 to front left servo 2 -->
+  <joint name="fl_leg_2_to_servo_2" type="fixed">
+    <parent link="link_servo_fl2"/>
+    <child link="link_leg_2_fl"/>
+    <origin rpy="-1.57079 0 1.57079" xyz="0 -0.22 0"/>
+  </joint>  
+
+  <!-- joint front left servo 3 to front left leg p2 -->
+  <joint name="fl_servo_3_to_leg_2" type="fixed">
+    <parent link="link_leg_2_fl"/>
+    <child link="link_servo_fl3"/>
+    <origin rpy="0 -1.57079 1.57079" xyz="-0.1675 -0.099 0"/>
+  </joint>  
+
+  <!-- joint front left leg 3 to front left servo 3 -->
+  <joint name="fl_leg_3_to_servo_3" type="revolute">
+    <parent link="link_servo_fl3"/>
+    <child link="link_leg_3_fl"/>
+    <axis xyz="1 0 0" />
+    <origin rpy="0 1.57079 0" xyz="0.0 0.0525 -0.099"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint mid left servo 2 to mid left leg p1 -->
+  <joint name="ml_servo_2_to_leg_1" type="revolute">
+    <parent link="link_leg_1_ml"/>
+    <child link="link_servo_ml2"/>
+    <axis xyz="0 0 1" />
+    <origin rpy="0 1.57079 0" xyz="-0.069 -0.373 -0.209"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint mid left leg p2 to mid left servo 2 -->
+  <joint name="ml_leg_2_to_servo_2" type="fixed">
+    <parent link="link_servo_ml2"/>
+    <child link="link_ml_leg_p2"/>
+    <origin rpy="-1.57079 0 1.57079" xyz="0 -0.22 0"/>
+  </joint>  
+
+  <!-- joint mid left servo 3 to mid left leg p2 -->
+  <joint name="ml_servo_3_to_leg_2" type="fixed">
+    <parent link="link_ml_leg_p2"/>
+    <child link="link_servo_ml3"/>
+    <origin rpy="0 -1.57079 1.57079" xyz="-0.1675 -0.099 0"/>
+  </joint>  
+
+  <!-- joint mid left leg 3 to mid left servo 3 -->
+  <joint name="ml_leg_3_to_servo_3" type="revolute">
+    <parent link="link_servo_ml3"/>
+    <child link="link_ml_leg_p3"/>
+    <axis xyz="1 0 0" />
+    <origin rpy="0 1.57079 0" xyz="0.0 0.0525 -0.099"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint back left servo 2 to back left leg p1 -->
+  <joint name="bl_servo_2_to_leg_1" type="revolute">
+    <parent link="link_leg_1_bl"/>
+    <child link="link_servo_bl2"/>
+    <axis xyz="0 0 1" />
+    <origin rpy="0 1.57079 0" xyz="-0.069 -0.373 -0.209"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint back left leg p2 to back left servo 2 -->
+  <joint name="bl_leg_2_to_servo_2" type="fixed">
+    <parent link="link_servo_bl2"/>
+    <child link="link_bl_leg_p2"/>
+    <origin rpy="-1.57079 0 1.57079" xyz="0 -0.22 0"/>
+  </joint>  
+
+  <!-- joint back left servo 3 to back left leg p2 -->
+  <joint name="bl_servo_3_to_leg_2" type="fixed">
+    <parent link="link_bl_leg_p2"/>
+    <child link="link_servo_bl3"/>
+    <origin rpy="0 -1.57079 1.57079" xyz="-0.1675 -0.099 0"/>
+  </joint>  
+
+  <!-- joint back left leg 3 to back left servo 3 -->
+  <joint name="bl_leg_3_to_servo_3" type="revolute">
+    <parent link="link_servo_bl3"/>
+    <child link="link_bl_leg_p3"/>
+    <axis xyz="1 0 0" />
+    <origin rpy="0 1.57079 0" xyz="0.0 0.0525 -0.099"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint back right servo 2 to back right leg p1 -->
+  <joint name="br_servo_2_to_leg_1" type="revolute">
+    <parent link="link_leg_1_br"/>
+    <child link="link_servo_br2"/>
+    <axis xyz="0 0 1" />
+    <origin rpy="0 1.57079 0" xyz="-0.069 -0.373 -0.209"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint back right leg p2 to back right servo 2 -->
+  <joint name="br_leg_2_to_servo_2" type="fixed">
+    <parent link="link_servo_br2"/>
+    <child link="link_br_leg_p2"/>
+    <origin rpy="-1.57079 0 1.57079" xyz="0 -0.22 0"/>
+  </joint>  
+
+  <!-- joint back right servo 3 to back right leg p2 -->
+  <joint name="br_servo_3_to_leg_2" type="fixed">
+    <parent link="link_br_leg_p2"/>
+    <child link="link_servo_br3"/>
+    <origin rpy="0 -1.57079 1.57079" xyz="-0.1675 -0.099 0"/>
+  </joint>  
+
+  <!-- joint back right leg 3 to back right servo 3 -->
+  <joint name="br_leg_3_to_servo_3" type="revolute">
+    <parent link="link_servo_br3"/>
+    <child link="link_br_leg_p3"/>
+    <axis xyz="1 0 0" />
+    <origin rpy="0 1.57079 0" xyz="0.0 0.0525 -0.099"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint mid right servo 2 to mid right leg p1 -->
+  <joint name="mr_servo_2_to_leg_1" type="revolute">
+    <parent link="link_leg_1_mr"/>
+    <child link="link_servo_mr2"/>
+    <axis xyz="0 0 1" />
+    <origin rpy="0 1.57079 0" xyz="-0.069 -0.373 -0.209"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint mid right leg p2 to mid right servo 2 -->
+  <joint name="mr_leg_2_to_servo_2" type="fixed">
+    <parent link="link_servo_mr2"/>
+    <child link="link_mr_leg_p2"/>
+    <origin rpy="-1.57079 0 1.57079" xyz="0 -0.22 0"/>
+  </joint>  
+
+  <!-- joint mid right servo 3 to mid right leg p2 -->
+  <joint name="mr_servo_3_to_leg_2" type="fixed">
+    <parent link="link_mr_leg_p2"/>
+    <child link="link_servo_mr3"/>
+    <origin rpy="0 -1.57079 1.57079" xyz="-0.1675 -0.099 0"/>
+  </joint>  
+
+  <!-- joint mid right leg 3 to mid right servo 3 -->
+  <joint name="mr_leg_3_to_servo_3" type="revolute">
+    <parent link="link_servo_mr3"/>
+    <child link="link_mr_leg_p3"/>
+    <axis xyz="1 0 0" />
+    <origin rpy="0 1.57079 0" xyz="0.0 0.0525 -0.099"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+  <!-- joint front right servo 2 to front right leg p1 -->
+  <joint name="fr_servo_2_to_leg_1" type="revolute">
+    <parent link="link_leg_1_fr"/>
+    <child link="link_servo_fr2"/>
+    <axis xyz="0 0 1" />
+    <origin rpy="0 1.57079 0" xyz="-0.069 -0.373 -0.209"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>  
+
+  <!-- joint front right leg p2 to front right servo 2 -->
+  <joint name="fr_leg_2_to_servo_2" type="fixed">
+    <parent link="link_servo_fr2"/>
+    <child link="link_fr_leg_p2"/>
+    <origin rpy="-1.57079 0 1.57079" xyz="0 -0.22 0"/>
+  </joint>  
+
+  <!-- joint front right servo 3 to front right leg p2 -->
+  <joint name="fr_servo_3_to_leg_2" type="fixed">
+    <parent link="link_fr_leg_p2"/>
+    <child link="link_servo_fr3"/>
+    <origin rpy="0 -1.57079 1.57079" xyz="-0.1675 -0.099 0"/>
+  </joint>  
+
+  <!-- joint front right leg 3 to front right servo 3 -->
+  <joint name="fr_leg_3_to_servo_3" type="revolute">
+    <parent link="link_servo_fr3"/>
+    <child link="link_fr_leg_p3"/>
+    <axis xyz="1 0 0" />
+    <origin rpy="0 1.57079 0" xyz="0.0 0.0525 -0.099"/> 
+    <limit effort="1000.0" lower="-1.57079" upper="1.57079" velocity="1" />
+  </joint>
+
+<!-- ############################PLUGINS##################### -->
+
+  <gazebo>
+    <plugin name = "gazebo_ros_control" filename = "libgazebo_ros_control.so">
+      <robotNamespace>/hexapod_model</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <!-- servo 9 -->
+  <transmission name = "servo_9">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_9">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "fl_leg_1_to_servo_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 6 -->
+  <transmission name = "servo_6">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_6">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "fr_leg_1_to_servo_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 12 -->
+  <transmission name = "servo_12">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_12">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "ml_leg_1_to_servo_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 3 -->
+  <transmission name = "servo_3">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_3">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "mr_leg_1_to_servo_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 15 -->
+  <transmission name = "servo_15">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_15">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "bl_leg_1_to_servo_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 0 -->
+  <transmission name = "servo_0">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_0">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "br_leg_1_to_servo_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 10 -->
+  <transmission name = "servo_10">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_10">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "fl_servo_2_to_leg_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 11 -->
+  <transmission name = "servo_11">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_11">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "fl_leg_3_to_servo_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 13 -->
+  <transmission name = "servo_13">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_13">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "ml_servo_2_to_leg_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 14 -->
+  <transmission name = "servo_14">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_14">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "ml_leg_3_to_servo_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 16 -->
+  <transmission name = "servo_16">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_16">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "bl_servo_2_to_leg_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 17 -->
+  <transmission name = "servo_17">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_17">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "bl_leg_3_to_servo_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 1 -->
+  <transmission name = "servo_1">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_1">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "br_servo_2_to_leg_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 2 -->
+  <transmission name = "servo_2">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_2">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "br_leg_3_to_servo_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 4 -->
+  <transmission name = "servo_4">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_4">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "mr_servo_2_to_leg_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 5 -->
+  <transmission name = "servo_5">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_5">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "mr_leg_3_to_servo_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 7 -->
+  <transmission name = "servo_7">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_7">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "fr_servo_2_to_leg_1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- servo 8 -->
+  <transmission name = "servo_8">
+    <type>transmission_interface/SimpleTransmision</type>
+    <actuator name = "servo_8">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name = "fr_leg_3_to_servo_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+
+</robot>
