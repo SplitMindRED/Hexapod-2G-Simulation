@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro">
+   <link name = "link_Floor">
+      <pose> 0 0 0 0 0 0 </pose>
+
+      <inertial>
+         <mass value = "5"/>
+         <origin rpy = "0 0 0" xyz = "0 0 0" />
+         <inertia ixx ="0.4" ixy = "0" ixz = "0" iyy ="0.1" iyz = "0" izz = "0.1" />
+      </inertial>
+
+      <collision name = "collision_Floor">
+         <geometry>
+            <mesh filename = "package://hexapod/stl/Floor.stl" scale = "0.05 0.05 0.05"/>
+            <!-- <box size = " 2 2 1" /> -->
+         </geometry>
+      </collision>
+
+      <visual name="visual">
+         <origin rpy = "0 0 0" xyz = "0 0 0" />
+         <geometry>
+            <mesh filename = "package://hexapod/stl/Floor.stl" scale = "0.05 0.05 0.05" />
+           <!--  <box size = " 2 2 1" /> -->
+         </geometry>
+
+      </visual>
+   </link>
+
+</robot>
