@@ -9,9 +9,9 @@
 	<arg name = "z" default = "1"/>  
 
 	<!--  -->
-	<param name = "robot_description" command = "$(find xacro)/xacro --inorder '$(find my_robot_description)/urdf/$(arg model).urdf.xacro' " />
+	<param name = "robot_description" command = "$(find xacro)/xacro --inorder '$(find hexapod)/urdf/$(arg model).urdf.xacro' " />
 
-	<rosparam file = "$(find my_robot_description)/config/ros_control_config.yaml" command = "load"/>
+	<rosparam file = "$(find hexapod)/config/ros_control_config.yaml" command = "load"/>
 	<node name = "controller_spawner" pkg = "controller_manager" type = "spawner" ns = "/hexapod_model" args="joint_state_controller
 		servo_0_joint_position_controller  servo_1_joint_position_controller  servo_2_joint_position_controller  servo_3_joint_position_controller
 		servo_4_joint_position_controller  servo_5_joint_position_controller  servo_6_joint_position_controller  servo_7_joint_position_controller
@@ -29,7 +29,7 @@
 	<!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" /> -->
 
 	<!-- configuration file for rviz -->
-	<!-- <arg name="rvizconfig" default="$(find my_robot_description)/rviz/hexapod_sim.rviz" /> -->
+	<!-- <arg name="rvizconfig" default="$(find hexapod)/rviz/hexapod_sim.rviz" /> -->
 	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> -->
 
 

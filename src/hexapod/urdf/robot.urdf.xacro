@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-	<xacro:include filename="$(find my_robot_description)/urdf/materials.xacro" />
-  <xacro:include filename="$(find my_robot_description)/urdf/robot.gazebo.xacro"/>
+	<xacro:include filename="$(find hexapod)/urdf/materials.xacro" />
+  <xacro:include filename="$(find hexapod)/urdf/robot.gazebo.xacro"/>
 
   <gazebo>
         <self_collide>1</self_collide>
@@ -24,14 +24,14 @@
     <!-- <collision>
       <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
       </geometry>   
       <material name="white"/>  
     </visual> -->
@@ -51,14 +51,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="0.4 -0.75 -0.115"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Body.stl" scale="0.01 0.01 0.01"/>
       </geometry>   
       <material name="white"/>  
     </visual>
@@ -79,14 +79,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -107,14 +107,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -135,14 +135,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -163,14 +163,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -191,14 +191,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -217,14 +217,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -245,14 +245,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -273,14 +273,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -301,14 +301,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -329,14 +329,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -357,14 +357,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -383,14 +383,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.055 -0.2343822 -0.045"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -409,14 +409,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -435,14 +435,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -461,14 +461,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -487,14 +487,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -513,14 +513,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -539,14 +539,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -565,14 +565,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -591,14 +591,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -617,14 +617,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -643,14 +643,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -669,14 +669,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -695,14 +695,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -721,14 +721,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -747,14 +747,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -773,14 +773,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -799,14 +799,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -825,14 +825,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -851,14 +851,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -877,14 +877,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -903,14 +903,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -929,14 +929,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 ${-0.1125-0.0525} ${-0.164+0.099}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -955,14 +955,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.33 -0.115 ${-0.1041745 + 0.044}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p2.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="orange"/>
     </visual>
@@ -981,14 +981,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="-0.06 -0.1125 -0.164"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/ServoMG90S.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -1007,14 +1007,14 @@
     <collision>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
 
     <visual>
       <origin rpy="0 0 0" xyz="${-0.2-0.065} 0 ${0.2041745-0.3591745}"/>
       <geometry>
-        <mesh filename="package://my_robot_description/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hexapod/model/stl/Leg_p3.stl" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
